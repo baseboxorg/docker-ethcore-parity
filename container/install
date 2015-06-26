@@ -1,0 +1,15 @@
+#!/bin/sh
+
+BUILD_DEPS="software-properties-common"
+
+apt-get update -q
+apt-get install -q -y --no-install-recommends $BUILD_DEPS
+add-apt-repository ppa:ethereum/ethereum
+add-apt-repository ppa:ethereum/ethereum-dev
+apt-get update -q
+apt-get install -q -y geth
+
+apt-get purge -q -y $BUILD_DEPS
+apt-get autoremove -q -y
+apt-get clean -q
+rm -rf /var/lib/apt/lists
