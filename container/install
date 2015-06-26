@@ -2,6 +2,7 @@
 
 BUILD_DEPS="software-properties-common"
 
+apt-get update -q
 apt-get install -q -y --no-install-recommends $BUILD_DEPS
 add-apt-repository ppa:ethereum/ethereum
 add-apt-repository ppa:ethereum/ethereum-dev
