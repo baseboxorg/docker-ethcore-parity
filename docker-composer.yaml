@@ -1,0 +1,8 @@
+main:
+  build: .
+  restart: on-failure
+  volumes:
+    - ./data:/root/.ethereum
+  ports:
+    - "30303:30303"
+    - "8545:8545"
