@@ -1,5 +1,5 @@
 main:
-  build: ./container
+  image: chpio/ethereum
   restart: on-failure
   volumes:
     - ./data:/root/.ethereum
