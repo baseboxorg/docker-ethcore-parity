@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM ubuntu:trusty
 
 ADD ./install /opt/install
 RUN /opt/install
